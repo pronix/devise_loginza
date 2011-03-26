@@ -12,7 +12,7 @@ Dependencies
 Installation
 -----------
 Add to Gemfile
-    gem "", :git => "git://github.com/pronix/spree-multi-currency.git"
+    gem "devise_loginza",  :git => "git://github.com/pronix/devise_loginza.git"
 
 Usage
 -----
