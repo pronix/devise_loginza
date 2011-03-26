@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "devise_loginza"
   s.version     = DeviseLoginza::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Maxim"]
+  s.email       = ["parallel588@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Devise << Loginza}
+  s.description = %q{Devise << Loginza}
 
   s.rubyforge_project = "devise_loginza"
 
