@@ -21,3 +21,19 @@ Usage
                                                 { :style => "width:400px;height:350px;" }) %>
   Button:
      <%= loginza_button_tag("Login via OpenID", loginza_user_session_url, :providers => [ :google, :facebook, :twitter ]) %>
+
+Auto Registration
+-----------------
+
+  config/initializers/devise.rb
+    Devise.setup do |config|
+      config.loginza_auto_register = true
+    end
+
+  User.rb
+    class << self
+      def create_from_loginza(data)
+         ... create user ...
+         ... and return user ...
+      end
+    end

@@ -22,11 +22,11 @@ module Devise
 
         case loginza_result[:auth_state]
         when :ok
-          resource = if Devise.loginza_auto_register && mapping.to.respond_to?(:create_from_loginza)
-                       mapping.to.send(:create_from_loginza, loginza_result[:data])
-                     else
-                       mapping.to.find_by_email(loginza_result[:data]["email"])
-                     end
+          resource =  mapping.to.find_by_email(loginza_result[:data]["email"])
+          if resource.nil? && Devise.loginza_auto_register && mapping.to.respond_to?(:create_from_loginza)
+            resource = mapping.to.send(:create_from_loginza, loginza_result[:data])
+          end
+
           if resource
             success!(resource)
           else
